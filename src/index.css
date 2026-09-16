@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #F6F1E8;
+  color: #25211E;
+  font-family: Inter, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+::selection { background: #C8A96B; color: #241914; }
+
+@layer components {
+  .container-luxury { @apply mx-auto w-[min(1180px,92%)] lg:w-[min(1240px,90%)] ; }
+  .eyebrow { @apply text-[10px] font-semibold uppercase tracking-[0.28em] text-champagne; }
+  .display { @apply font-display font-medium leading-[.94] tracking-[-0.02em]; }
+  .gold-line { @apply h-px w-16 bg-champagne; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-[3px] bg-champagne px-6 py-3 text-xs font-semibold uppercase tracking-[0.08em] text-espresso transition duration-300 hover:bg-champagneLight; }
+  .btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-[3px] border border-champagne/70 px-6 py-3 text-xs font-semibold uppercase tracking-[0.08em] text-ivory transition duration-300 hover:bg-champagne hover:text-espresso; }
+  .section-pad { @apply py-20 sm:py-24 lg:py-28; }
+  .luxury-card { @apply overflow-hidden rounded-sm border border-sand/60 bg-white shadow-luxury; }
+}
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(36,25,20,.94) 0%, rgba(36,25,20,.72) 45%, rgba(36,25,20,.18) 100%);
+}
+@media (max-width: 640px) {
+  .hero-overlay { background: linear-gradient(180deg, rgba(36,25,20,.78), rgba(36,25,20,.84)); }
+}
